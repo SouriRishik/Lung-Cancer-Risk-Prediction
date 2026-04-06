@@ -72,23 +72,7 @@ jupyter notebook lung_cancer_research.ipynb
 
 In VS Code, use **Restart Kernel and Run All** for a clean execution.
 
-## Runtime Notes
-
-- Some sections are computationally heavy (especially Optuna, SHAP, and fairness constraints).
-- Figure outputs are written to `data/`.
-- Training artifacts from CatBoost are written to `catboost_info/`.
-
-## Metric Interpretation Note
-
-In the current notebook, one binary label is derived from a threshold on `Mortality_Risk`. If `Mortality_Risk` is also used as an input feature, near-perfect classification metrics are expected because the model is learning a threshold mapping.
-
-If you want stricter, leakage-resistant evaluation, use features that do not directly define the target.
-
-## Git Tracking Notes
-
-- `catboost_info/` is ignored in `.gitignore`.
-- Generated figure files are ignored by `data/.gitignore` (`fig*.png`).
-
 ## License
 
-See `LICENSE`.
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for full details.
